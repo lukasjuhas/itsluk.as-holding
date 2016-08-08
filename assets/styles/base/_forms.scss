@@ -1,0 +1,141 @@
+*:focus {
+  outline: 0;
+}
+
+input,
+select,
+textarea {
+  background-color: $col-background-light;
+  border: solid 1px $col-border;
+  border-radius: $border-radius;
+  color: $col-text;
+  line-height: ($base-spacing-unit * 1.5);
+  height: ($base-spacing-unit * 1.5);
+  padding: 0 ($base-spacing-unit / 2);
+  width: 100%;
+
+  &.input--big {
+    height: ($base-spacing-unit * 2);
+    padding: 0 ($base-spacing-unit * 1.25);
+    font-size: 1.125em;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  background: transparent;
+  border: 0;
+  line-height: normal;
+  height: auto;
+  width: auto;
+}
+
+input[type="file"] {
+  line-height: normal;
+  height: auto;
+  padding: ($base-spacing-unit / 4) ($base-spacing-unit / 2);
+}
+
+input[type="submit"] {
+  border-radius: $border-radius;
+}
+
+input[disabled] {
+  background-color: darken($col-background-light, 20);
+  cursor: not-allowed;
+}
+
+select {
+  line-height: normal;
+  padding: 0;
+  padding-left: ($base-spacing-unit / 2);
+}
+
+textarea {
+  min-height: ($base-spacing-unit * 4);
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+.form--inline {
+  .form__group {
+    display: inline-block;
+  }
+}
+
+.checkbox,
+.radio {
+  display: block;
+  padding-left: $base-spacing-unit;
+
+  &.inline {
+    display: inline-block;
+  }
+
+  > input {
+    float: left;
+    margin-left: -($base-spacing-unit);
+    margin-top: 4px;
+  }
+}
+
+.form__group {
+  display: block;
+  margin-bottom: $base-spacing-unit;
+
+  &.form__group--spaceless {
+    margin: 0;
+  }
+
+  &.form__group--flex {
+    display: flex;
+  }
+}
+
+.form__label {
+  display: block;
+  margin-bottom: ($base-spacing-unit / 2);
+}
+
+.form__note {
+  font-style: italic;
+  color: lighten($col-text, 20);
+  transition: opacity $animation linear;
+  text-align: left;
+  font-size: 0.875em;
+  padding: ($base-spacing-unit / 3) 0;
+
+  .not-logged-in & {
+    color: $col-text-light;
+  }
+}
+
+.input-group {
+  > input,
+  > button,
+  .form__note {
+    &:first-child {
+      float: left;
+    }
+
+    &:last-child {
+      float: right;
+    }
+  }
+}
+
+.form {
+  &.form--trip-create {
+    input[type="text"] {
+      // border-top-right-radius: 0;
+      // border-bottom-right-radius: 0;
+      // border-right: 0;
+    }
+
+    button[type="submit"] {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

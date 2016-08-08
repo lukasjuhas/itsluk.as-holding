@@ -1,0 +1,33 @@
+.alert {
+  padding: $base-spacing-unit;
+  margin-bottom: $base-spacing-unit;
+  border: 1px solid transparent;
+
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: $base-spacing-unit;
+  }
+
+  &.alert--success {
+    color: $col-success;
+    border-color: $col-success;
+  }
+
+
+  &.alert--info {
+    color: $col-notification;
+    border-color: $col-notification;
+  }
+  &.alert--warning {
+    color: $col-danger;
+    border-color: $col-danger;
+  }
+  &.alert--danger {
+    color: $col-danger;
+    border-color: $col-danger;
+  }
+}

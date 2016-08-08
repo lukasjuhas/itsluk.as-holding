@@ -1,0 +1,44 @@
+// colours
+$col-brand: #df815a;
+
+$col-background-light: #fff;
+$col-background: #ececec;
+
+$col-text: #2c2c2c;
+$col-text-light: #fff;
+
+$col-border: lighten($col-text, 60);
+
+$col-danger: #d9534f;
+$col-notification: $col-brand;
+$col-success: #00c385;
+
+// typograpgy
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$base-font-size: 16;
+$base-line-height: 1.5;
+$base-spacing-unit: ($base-font-size * $base-line-height) * 1px;
+
+
+// breakpoints
+$breakpoint-sm: 767px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+$breakpoints: (
+  "lg" "(min-width: " + $breakpoint-lg + ")",
+  "md" "(min-width: " + $breakpoint-md + ") and (max-width: " + ($breakpoint-lg - 1) + ")",
+  "sm" "(min-width: " + ($breakpoint-sm + 1) + ") and (max-width:" + ($breakpoint-md - 1) + ")",
+  "xs" "(max-width: " + $breakpoint-sm + ")"
+);
+
+// grid
+$grid-max-width: 1200px;
+$grid-columns:   12;
+$grid-gutter:    $base-spacing-unit;
+
+// animations
+$animation: .3s;
+
+// components
+$border-radius: 4px;
